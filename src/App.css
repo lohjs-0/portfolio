@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+button, a, [role="button"] {
+  cursor: pointer;
+}
+
+/* ─── TOKENS ─── */
+:root {
+  --red:        #c0392b;
+  --red-light:  #e05a4a;
+  --red-dim:    rgba(192, 57, 43, 0.12);
+  --red-border: rgba(192, 57, 43, 0.3);
+
+  --bg:      #0d0d0d;
+  --bg2:     #141414;
+  --bg3:     #1a1a1a;
+  --surface:  #1f1f1f;
+  --surface2: #252525;
+  --border:   rgba(255, 255, 255, 0.07);
+
+  --text:  #f0ebe6;
+  --text2: #9a9390;
+  --text3: #5c5a58;
+
+  --nav-bg: rgba(13, 13, 13, 0.85);
+}
+
+[data-theme='light'] {
+  --bg:      #f5f2ef;
+  --bg2:     #ede9e4;
+  --bg3:     #e5e0da;
+  --surface:  #ffffff;
+  --surface2: #faf8f6;
+  --border:   rgba(0, 0, 0, 0.08);
+
+  --text:  #1a1816;
+  --text2: #6b6460;
+  --text3: #a09890;
+
+  --nav-bg:    rgba(245, 242, 239, 0.88);
+  --red-dim:   rgba(192, 57, 43, 0.08);
+  --red-border: rgba(192, 57, 43, 0.25);
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+/* ─── SHARED SECTION STYLES ─── */
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.4rem;
+}
+
+.slashes {
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section-tag h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text);
+}
+
+.section-comment {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--text3);
+  margin-bottom: 3rem;
+}
